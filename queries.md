@@ -1,6 +1,14 @@
 # Database Queries
 
 ## find all customers that live in London. Returns 6 records.
+    SELECT * FROM Customers where city is 'London'
+
+    4	Around the Horn	Thomas Hardy	120 Hanover Sq.	London	WA1 1DP	UK
+    11	B's Beverages	Victoria Ashworth	Fauntleroy Circus	London	EC2 5NT	UK
+    16	Consolidated Holdings	Elizabeth Brown	Berkeley Gardens 12 Brewery	London	WX1 6LT	UK
+    19	Eastern Connection	Ann Devon	35 King George	London	WX3 6FW	UK
+    53	North/South	Simon Crowther	South House 300 Queensbridge	London	SW7 1RZ	UK
+    72	Seven Seas Imports	Hari Kumar	90 Wadhurst Rd.	London	OX15 4NB	UK
 
 ## find all customers with postal code 1010. Returns 3 customers.
 
