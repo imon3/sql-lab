@@ -251,7 +251,7 @@
     You have made changes to the database. Rows affected: 1
 
 ## update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
-    update customers set postalcode = 11122 where contactname is 'Bilbo Baggings'
+    update customers set postalcode = 11122 where customerid = 'Bilbo Baggings'
 
     You have made changes to the database.
 
