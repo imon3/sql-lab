@@ -275,6 +275,10 @@
 
 ## list orders grouped by customer's city showing number of orders per city. Returns 58 Records with _Aachen_ showing 2 orders and _Albuquerque_ showing 7 orders.
 
-    SELECT * FROM [Orders] left join customers on orders.CustomerID = Customers.CustomerID order by Customers.City
+   SELECT Customers.City, count(Orders.CustomerID) as OrderIds FROM [Orders] left join customers on orders.CustomerID = Customers.CustomerID group by Customers.City order by OrderIDs desc
 
 ## delete all users that have no orders. Should delete 17 (or 18 if you haven't deleted the record added) records.
+
+    delete from Customers where not exists (select CustomerId from Orders where customerID = Customers.CustomerID)
+
+    You have made changes to the database. Rows affected: 18
